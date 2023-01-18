@@ -6,13 +6,12 @@
         
         <div class="col-md-6">
             <!--  -->
-            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#post_new_modal">New Post</button>
-            <br>
-            <br>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#post_new_modal">
+                New Post
+            </button>
+            <br><br>
             <div id="posts_container_div">
-        
             </div>
-            
         </div>
     </div>
 </div>
