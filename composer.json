@@ -1,0 +1,8 @@
+{
+    
+    "require": {
+        "pusher/pusher-php-server": "^7.0",
+        "rakit/validation": "^1.4",
+        "ramsey/uuid": "^4.2"
+    }
+}
