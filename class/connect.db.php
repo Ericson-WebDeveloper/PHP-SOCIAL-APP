@@ -20,7 +20,7 @@ class Connection
         if (!$this->connection) {
             try {
                 $this->connection = new PDO(
-                    'mysql:host=' . $this->host . ';dbname=' . $this->databasename . '',
+                    'mysql:host=' . $this->host . ';dbname=' . $this->databasename . ':7104',
                     $this->username,
                     $this->password,
                     array(PDO::MYSQL_ATTR_LOCAL_INFILE => true)
