@@ -1,6 +1,6 @@
 <?php
 
-require_once(dirname(__FILE__) . "/vendor/autoload.php");
+require_once(dirname(__FILE__, 1) . "/vendor/autoload.php");
 require_once(dirname(__FILE__) . "/class/class.php");
 
 use Rakit\Validation\Validator;
