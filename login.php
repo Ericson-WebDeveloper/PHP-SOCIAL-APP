@@ -4,8 +4,6 @@ if (isset($_SESSION['user'])) {
   header("Location: profile.php");
 }
 
-var_dump(glob("vendor"));
-
 ?>
 
 <!DOCTYPE html>
