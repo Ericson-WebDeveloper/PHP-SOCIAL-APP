@@ -1,7 +1,7 @@
 <?php
 
 require_once(dirname(__FILE__, 1) . "/vendor/autoload.php");
-echo getcwd();
+var_dump(getcwd());
 die();
 require_once(dirname(__FILE__) . "/class/class.php");
 
