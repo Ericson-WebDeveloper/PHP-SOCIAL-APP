@@ -4,7 +4,7 @@ if (isset($_SESSION['user'])) {
   header("Location: profile.php");
 }
 
-var_dump(scandir("vendor"));
+var_dump(glob("vendor"));
 
 ?>
 
