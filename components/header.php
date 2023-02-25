@@ -11,7 +11,7 @@
     // name of project
     $project = dirname(__DIR__);
     $project = explode('\\', $project);
-    $project = $project[3];
+    $project = $project[4];
     define("DIRECTION", "" . $REQUEST_PROTOCOL . "" . $_SERVER['HTTP_HOST'] . "/" . $project . "");
     define("ASSET", "" . $REQUEST_PROTOCOL . "" . $_SERVER['HTTP_HOST'] . "/" . $project . "/public");
     define("ROUTES_PATH", DIRECTION . "/");
