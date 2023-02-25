@@ -3,9 +3,9 @@
 export default class Notification {
 
     constructor() {
-        this.pusher = new Pusher('c77d753570287883aa81', {
-            cluster: 'ap1'
-        });
+        this.pusher = new Pusher('983513d8fdea2da8d62d', {
+                cluster: 'ap3'
+            });
         this.channel = this.pusher.subscribe('request-alert-channel');
         this.friendRequestChannel = this.pusher.subscribe('friend-request-alert-channel');
         this.acceptrequest = this.pusher.subscribe('accept-request-alert-channel');
