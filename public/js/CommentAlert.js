@@ -1,7 +1,7 @@
 export default class CommentAlert {
     constructor() {
-        this.pusher = new Pusher('c77d753570287883aa81', {
-            cluster: 'ap1'
+        this.pusher = new Pusher('983513d8fdea2da8d62d', {
+            cluster: 'ap3'
         });
         // this.channel = null;
         this.channel = this.pusher.subscribe(`new-comment-alert-channel`);
