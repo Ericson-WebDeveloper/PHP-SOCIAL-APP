@@ -6,10 +6,10 @@ class Connection
 
     public $connection;
     private $error;
-    private $host = "localhost";
-    private $databasename = "php_pusher_chat";
+    private $host = "containers-us-west-83.railway.app";
+    private $databasename = "railway";
     private $username = "root";
-    private $password = "";
+    private $password = "HODwRznKmdo6MP8DgCIq";
 
     /**
      * Public method for creating an OCI connection
