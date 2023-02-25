@@ -9,14 +9,14 @@ class Notif
     public function __construct()
     {
         $options = array(
-            'cluster' => 'ap1',
+            'cluster' => 'ap3',
             'useTLS' => true
         );
 
         $this->pusher = new Pusher\Pusher(
-            'c77d753570287883aa81',
-            '751be0f2e46071c83b21',
-            '1357879',
+            '983513d8fdea2da8d62d',
+            '54446f6cde3cee7a1469',
+            '916013',
             $options
         );
     }
