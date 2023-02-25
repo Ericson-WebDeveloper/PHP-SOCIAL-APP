@@ -1,9 +1,7 @@
 <?php
 
-// require_once(dirname(__FILE__) . "/vendor/autoload.php");
-// require_once(dirname(__FILE__, 2) . "/class/class.php");
-echo dirname(__FILE__) . "/class/class.php";
-die();
+require_once(dirname(__FILE__, 2) . "/vendor/autoload.php");
+require_once(dirname(__FILE__, 2) . "/class/class.php");
 
 use Rakit\Validation\Validator;
 use Ramsey\Uuid\Uuid;
