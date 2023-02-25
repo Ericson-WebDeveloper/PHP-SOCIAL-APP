@@ -2,7 +2,7 @@
 
 // require_once(dirname(__FILE__) . "/vendor/autoload.php");
 require_once(dirname(__FILE__) . "/class/class.php");
-var_dump(dirname(__FILE__) . "/class/class.php");
+echo dirname(__FILE__) . "/class/class.php";
 die();
 
 use Rakit\Validation\Validator;
