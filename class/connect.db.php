@@ -6,10 +6,11 @@ class Connection
 
     public $connection;
     private $error;
-    private $host = "containers-us-west-83.railway.app";
+    private $host = "containers-us-west-49.railway.app";
     private $databasename = "railway";
     private $username = "root";
-    private $password = "HODwRznKmdo6MP8DgCIq";
+    private $password = "TEQ9xef2Ffjw2oscBeba";
+    private $port = "6569";
 
     /**
      * Public method for creating an OCI connection
@@ -20,7 +21,7 @@ class Connection
         if (!$this->connection) {
             try {
                 $this->connection = new PDO(
-                    'mysql:host=' . $this->host . ';dbname=' . $this->databasename . ':7104',
+                    'mysql:host=' . $this->host . ';dbname=' . $this->databasename . ';port='. $this->port,
                     $this->username,
                     $this->password,
                     array(PDO::MYSQL_ATTR_LOCAL_INFILE => true)
