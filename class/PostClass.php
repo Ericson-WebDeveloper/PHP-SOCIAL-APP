@@ -55,7 +55,7 @@ class Post
         try {
             $sql = "SELECT posts.post_id, posts.details, posts.image, posts.created_at, posts.user_id,  
             users.id as user_user_id, users.first_name, users.last_name, users.email, 
-            user_details.user_id as user_d_user_id, user_details.bday, user_details.gender, user_details.profile,
+            user_details.user_id as user_d_user_id, ANY_VALUE(user_details.bday), ANY_VALUE(user_details.gender), ANY_VALUE(user_details.profile),
             COUNT(comments.id_post) as comments_count
             FROM `posts` 
             INNER JOIN users ON users.id = posts.user_id
