@@ -13,7 +13,7 @@
 //  $project = $project[4];
     $project = str_replace("/","",$project);
 //     define("DIRECTION", "" . $REQUEST_PROTOCOL . "" . $_SERVER['HTTP_HOST'] . "/" . $project . "");
-    define("DIRECTION", "" . $REQUEST_PROTOCOL . "" . $_SERVER['HTTP_HOST'] . "/");
+    define("DIRECTION", "" . $REQUEST_PROTOCOL . "" . $_SERVER['HTTP_HOST']);
 //     define("ASSET", "" . $REQUEST_PROTOCOL . "" . $_SERVER['HTTP_HOST'] . "/" . $project . "/public");\
     define("ASSET", "" . $REQUEST_PROTOCOL . "" . $_SERVER['HTTP_HOST'] . "/public");
     define("ROUTES_PATH", DIRECTION . "/");
