@@ -53,9 +53,9 @@ class Post
     {
 //         user_details.user_id, user_details.bday, user_details.gender, user_details.profile,
         try {
-            $sql = "SELECT posts.*, 
+            $sql = "SELECT posts.post_id, posts.details, posts.image, posts.created_at, posts.user_id,  
             users.id as user_user_id, users.first_name, users.last_name, users.email, 
-            user_details.user_id as user_d_user_id, user_details.gender, user_details.profile,
+            user_details.user_id as user_d_user_id, user_details.bday, user_details.gender, user_details.profile,
             COUNT(comments.id_post) as comments_count
             FROM `posts` 
             INNER JOIN users ON users.id = posts.user_id
@@ -83,7 +83,7 @@ class Post
             $offset = $offset == 0 ? 5 : $offset;
             $sql = "SELECT comments.*, 
             users.id as user_user_id, users.first_name, users.last_name, users.email, 
-            user_details.user_id as user_d_user_id, user_details.gender, user_details.profile
+            user_details.user_id as user_d_user_id, user_details.bday, user_details.gender, user_details.profile
             FROM comments 
             INNER JOIN users ON comments.id_user = users.id 
             INNER JOIN user_details ON user_details.user_id = users.id
