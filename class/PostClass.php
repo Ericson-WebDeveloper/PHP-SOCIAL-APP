@@ -51,10 +51,11 @@ class Post
 
     public function getnewsfeedpost($userid, $offset)
     {
+//         user_details.user_id, user_details.bday, user_details.gender, user_details.profile,
         try {
             $sql = "SELECT posts.*, 
             users.id as user_user_id, users.first_name, users.last_name, users.email, 
-            user_details.user_id, user_details.bday, user_details.gender, user_details.profile,
+            user_details.user_id, user_details.gender, user_details.profile,
             COUNT(comments.id_post) as comments_count
             FROM `posts` 
             INNER JOIN users ON users.id = posts.user_id
@@ -76,12 +77,13 @@ class Post
 
     public function getnewsfeedcomments($postId, $offset)
     {
+        // user_details.user_id, user_details.bday, user_details.gender, user_details.profile
         // SELECT comments.*, users.id as user_user_id, users.first_name, users.last_name, users.email, user_details.user_id, user_details.bday, user_details.gender, user_details.profile FROM `comments` INNER JOIN users ON users.id = comments.id_user INNER JOIN user_details ON user_details.user_id = users.id WHERE comments.id_post = 'd7add701-e536-40df-8f2b-560a90336cff';
         try {
             $offset = $offset == 0 ? 5 : $offset;
             $sql = "SELECT comments.*, 
             users.id as user_user_id, users.first_name, users.last_name, users.email, 
-            user_details.user_id, user_details.bday, user_details.gender, user_details.profile
+            user_details.user_id, user_details.gender, user_details.profile
             FROM comments 
             INNER JOIN users ON comments.id_user = users.id 
             INNER JOIN user_details ON user_details.user_id = users.id
