@@ -10,9 +10,8 @@
     $REQUEST_PROTOCOL = $secured ? 'https://' : 'http://';
     // name of project
     $project = dirname(__DIR__);
-    var_dump($project);
-    $project = explode('\\', $project);
-    $project = $project[4];
+//  $project = $project[4];
+    $project = str_replace("/","",$project);
     define("DIRECTION", "" . $REQUEST_PROTOCOL . "" . $_SERVER['HTTP_HOST'] . "/" . $project . "");
     define("ASSET", "" . $REQUEST_PROTOCOL . "" . $_SERVER['HTTP_HOST'] . "/" . $project . "/public");
     define("ROUTES_PATH", DIRECTION . "/");
