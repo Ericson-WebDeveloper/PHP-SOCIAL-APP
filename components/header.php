@@ -15,7 +15,7 @@
 //     define("DIRECTION", "" . $REQUEST_PROTOCOL . "" . $_SERVER['HTTP_HOST'] . "/" . $project . "");
     define("DIRECTION", "" . $REQUEST_PROTOCOL . "" . $_SERVER['HTTP_HOST'] . "/");
 //     define("ASSET", "" . $REQUEST_PROTOCOL . "" . $_SERVER['HTTP_HOST'] . "/" . $project . "/public");\
-    define("ASSET", "" . $REQUEST_PROTOCOL . "" . $_SERVER['HTTP_HOST'] . "/" . $project . "/public");
+    define("ASSET", "" . $REQUEST_PROTOCOL . "" . $_SERVER['HTTP_HOST'] . "/public");
     define("ROUTES_PATH", DIRECTION . "/");
     define("COMPONENTS", DIRECTION . "/components");
     define("CONTROLLER", DIRECTION . '/controller');
