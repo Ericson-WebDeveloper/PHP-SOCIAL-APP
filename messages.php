@@ -203,10 +203,7 @@
 		let msgdiv = document.querySelector(".msg_card_body");
 		let user_reference = '<?= $_SESSION['user']->id ?>';
 		let mss = messages.map((message) => {
-			// let currentTime = moment();
-			// let timeSend = moment(message.m_send_date);
-			// let onedDay = currentTime.diff(timeStore, 'h');
-			// console.log(onedDay);
+
 			if (message.m_id) {
 				let img = '';
 				if (message.m_sender == user_reference) {
@@ -421,16 +418,6 @@
 </script>
 
 <style>
-	/* @keyframes append-animate {
-	from {
-		transform: scale(0);
-		opacity: 1;
-	}
-	to {
-		transform: scale(1);
-		opacity: 1;	
-	}
-}
 
 /* animate conatct head */
 	#contacts_container {
@@ -453,40 +440,6 @@
 		border-radius: 50%;
 		display: inline-block;
 	}
-
-	/* .bg-white {
-    --bs-bg-opacity: 1;
-    background-color: rgba(var(--bs-white-rgb),var(--bs-bg-opacity))!important;
-}
-.align-items-stretch {
-    align-items: stretch!important;
-}
-.flex-shrink-0 {
-    flex-shrink: 0!important;
-}
-.flex-column {
-    flex-direction: column!important;
-}
-.d-flex {
-    display: flex!important;
-}
-
-.scrollarea {
-    overflow-y: auto;
-}
-.border-bottom {
-    border-bottom: 1px solid #dee2e6!important;
-}
-.list-group-flush {
-    border-radius: 0;
-}
-.list-group {
-    display: flex;
-    flex-direction: column;
-    padding-left: 0;
-    margin-bottom: 0;
-    border-radius: 0.25rem;
-} */
 
 	.navbar .navbar-nav .nav-link {
 		color: #000000;
