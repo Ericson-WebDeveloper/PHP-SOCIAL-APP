@@ -222,16 +222,9 @@ if (isset($_GET['get-all-chat-friends'])) {
         }
 
         $chats = $user->fetchChatFriends($_SESSION['user']->id);
-        // if($chats) {
         header('Content-Type: application/json');
         http_response_code(200);
         echo json_encode(['chats' => $chats, 'status' => 200]);
-        // } else {
-        //     header('Content-Type: application/json');
-        //     http_response_code(400);
-        //     echo json_encode(['error' => 'Server cannot process your request', 'status' => 400]); 
-        // }
-
 
     } catch (\Exception $e) {
         header('Content-Type: application/json');
@@ -284,11 +277,6 @@ if (isset($_POST['update-login_credential-datas'])) {
         echo json_encode(['error' => 'Server cannot process your request', 'status' => 500]);
     }
 }
-
-
-
-
-
 
 
 if (isset($_POST['add-new-about'])) {
@@ -354,9 +342,6 @@ if (isset($_GET['fetch-all-about'])) {
         echo json_encode(['error' => 'Server cannot process your request', 'status' => 500]);
     }
 }
-
-
-
 
 
 if (isset($_POST['update-profile-datas'])) {
