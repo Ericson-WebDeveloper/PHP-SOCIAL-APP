@@ -420,50 +420,6 @@ class User
                 WHERE chats.user_id = '$userid')
                 ORDER BY created_at DESC ";
 
-                // (SELECT chats.id as c_id, chats.user_id, chats.friend_id, chats.created_at,
-                // users.id as uid, users.first_name, users.last_name, users.email, users.status,
-                // messages.chat_id, messages.send_date
-                // FROM `chats`
-                // LEFT JOIN users ON users.id = chats.user_id 
-                // LEFT JOIN messages ON messages.chat_id = chats.id 
-                // WHERE chats.friend_id = '$userid' 
-                // ORDER BY
-                // CASE WHEN messages.send_date != null
-                // THEN messages.send_date end DESC, 
-                // CASE WHEN messages.send_date = null
-                // THEN chats.created_at end DESC)
-
-                // UNION 
-
-                // (SELECT chats.id as c_id, chats.user_id, chats.friend_id, chats.created_at, 
-                // users.id as uid, users.first_name, users.last_name, users.email, users.status,
-                // messages.chat_id, messages.send_date
-                // FROM `chats`
-                // LEFT JOIN users ON users.id = chats.friend_id 
-                // LEFT JOIN messages ON messages.chat_id = chats.id 
-                // WHERE chats.user_id = '$userid' 
-                // ORDER BY
-                // CASE WHEN messages.send_date != null
-                // THEN messages.send_date end DESC, 
-                // CASE WHEN messages.send_date = null
-                // THEN chats.created_at end DESC)
-
-
-
-
-                // ORDER BY COALESCE(messages.send_date)
-
-                // $sql2 = "SELECT chats.id as c_id, chats.user_id, chats.friend_id, 
-                // users.id as uid, users.first_name, users.last_name, users.email, users.status
-                // FROM `chats`
-                // INNER JOIN users ON users.id = chats.friend_id 
-                // WHERE chats.user_id = '$userid' ";
-
-                // $response = $this->connect->get($sql);
-                // $response2 = $this->connect->get($sql2);
-                // $newarray = array_merge($response, $response2);
-                // return $newarray; 
-
                 return $this->connect->get($sql);
             } else {
                 return [];
