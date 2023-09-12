@@ -13,50 +13,12 @@ export default class ChatNotificationAlert {
         this.channel = this.pusher.subscribe(`message-active-alert-channel`);
     }
 
-    // bindMessageDirectEvent = (callback1, callback2, chatmate, moment) => {
-    //     this.channel.bind(`message-active-alert-event`, async function(data) {
-    //         let response = JSON.parse(JSON.stringify(data));
-    //         const urlParams = new URLSearchParams(window.location.search);
-	// 	    const ct = urlParams.get('ct');
-    //         // console.log(ct == response.sender, ct);
-    //         // console.log('rec',response.reciever);
-    //         let r = await fetch(`./controller/UserController.php?fetch-data-user=${true}&userId=${response.sender}`);
-    //         r = await r.json();
-    //         if(response) {
-    //             // un ng send ng message -> response.sender
-    //             // un current user login of page -> chatmate
-    //             // un reciever ng message = response.reciever
-    //             // un active chatmate na nakaselect -> ct
-    //             if(response.sender != chatmate && chatmate == response.reciever) {
-    //                 callback1(response.sender);
-    //             }
-                
-    //             if(ct == response.sender && chatmate == response.reciever) {
-    //                 let img = '';
-    //                 img = r.userfetch.profile == 'default-profile.png' ? './public/images/default-profile.png' : r.userfetch.profile;
-                    
-    //                 let newMessage = `<div class="d-flex ${response.message.m_sender == chatmate ? 'justify-content-end' : 'justify-content-start'} mb-4">
-    //                                 <div class="${response.message.m_sender == chatmate ? 'msg_cotainer_send' : 'msg_cotainer'}" style="min-width: 70px;">
-    //                                     ${response.message.m_message}
-    //                                     <span class="${response.message.m_sender == chatmate ? 'msg_time_send' : 'msg_time'}">
-    //                                     ${moment(response.message.m_send_date).format('LT')}</span>
-    //                                 </div>
-    //                                 <div class="img_cont_msg">
-    //                                     <img src="${img}" class="rounded-circle user_img_msg">
-    //                                 </div>
-    //                             </div>`;
-    //                 callback2(newMessage);
-    //             }
-    //         }
-    //     });
-    // }
+
     bindMessageDirectEvent = (callback1, callback2, chatmate, moment) => {
         this.channel.bind(`message-active-alert-event.${chatmate}`, async function(data) {
             let response = JSON.parse(JSON.stringify(data));
             const urlParams = new URLSearchParams(window.location.search);
 		    const ct = urlParams.get('ct');
-            // console.log(ct == response.sender, ct);
-            // console.log('rec',response.reciever);
             let r = await fetch(`./controller/UserController.php?fetch-data-user=${true}&userId=${response.sender}`);
             r = await r.json();
             if(response) {
