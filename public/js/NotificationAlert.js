@@ -66,25 +66,3 @@ export default class Notification {
         });
     }
 }
-
-
-
-// let pusher = new Pusher('c77d753570287883aa81', {
-//     cluster: 'ap1'
-// });
-
-// export const bindRequestAlert = (userdata) => {
-//     var channel = pusher.subscribe('request-alert-channel');
-//     channel.bind('request-alert-event', function(data) {
-//         let requestdata = JSON.parse(JSON.stringify(data));
-//         if(requestdata.user_request_id == userdata) {
-//             alert('You Have new Friend Request coming from '+requestdata.first_name + ' ' + requestdata.last_name);
-//         }
-//     });
-// }
-
-// export const unbindRequestAlert = () => {
-//     channel.unbind('request-alert-event');
-// }
-
-
