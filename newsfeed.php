@@ -33,9 +33,7 @@ import CommentAlert from '<?= ASSET ?>/js/CommentAlert.js';
         div.innerHTML = '';
             datas.forEach((comment) => {
                 let commentElement = '';
-                // <small>Like</small> 
-                // <small>Reply</small> 
-                // <small>Translate</small> 
+
                 commentElement = ` <div class="d-flex flex-row mb-2"> <img src="${comment.profile == 'default-profile.png' ? './public/images/default-profile.png' : comment.profile}" 
                 width="40" class="rounded-image me-2">
                                     <div class="d-flex flex-column ml-2"> <span class="name">${comment.first_name + ' ' + comment.last_name}</span> 
@@ -50,21 +48,6 @@ import CommentAlert from '<?= ASSET ?>/js/CommentAlert.js';
                 div.appendChild(span);
             });
     }
-
-    // const displayNewComment = (ref, comment) => {
-    //     let div = document.getElementById(`comments_container_div_${ref}`);
-    //     const span = document.createElement("span");
-
-    //     let newC = `<div class="d-flex flex-row mb-2"> <img src="${comment.profile == 'default-profile.png' ? './public/images/default-profile.png' : comment.profile}" 
-    //         width="40" class="rounded-image me-2">
-    //         <div class="d-flex flex-column ml-2"> <span class="name">${comment.first_name + ' ' + comment.last_name}</span> 
-    //         <small class="comment-text">${comment.comment}</small>
-    //             <div class="d-flex flex-row align-items-center status"> 
-
-    //             <small>${moment(comment.created_at).calendar() }</small> </div>
-    //         </div>
-    //     </div>`;
-    // }
 
     const putOpenComment = (ref) => {
         document.getElementById(`comment_btn_${ref}`).addEventListener("click", async (e) => {
