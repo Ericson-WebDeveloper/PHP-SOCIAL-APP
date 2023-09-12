@@ -9,8 +9,7 @@
                 <div class="media align-items-end profile-head">
                     <div class="profile mr-3">
                         <img src="" id="user_profile_picture" alt="..." width="130" height="100" class="rounded mb-2 img-thumbnail">
-                        <!-- <button type="button" class="btn btn-outline-dark btn-sm btn-block text-white"
-                            data-bs-toggle="modal" data-bs-target="#profile_avatar_modal">Edit profile</button> -->
+
                     </div>
                     <div class="media-body mb-5 text-white">
 
@@ -25,32 +24,22 @@
             </div>
             <div class="bg-light p-4 d-flex justify-content-end text-center">
                 <ul class="list-inline mb-0">
-                    <!-- <li class="list-inline-item">
-                        <h5 class="font-weight-bold mb-0 d-block">215</h5><small class="text-muted"> <i class="fas fa-image mr-1"></i>Photos</small>
-                    </li> -->
                     <li class="list-inline-item">
                         <h5 class="font-weight-bold mb-0 d-block" id="friends_count"></h5><small class="text-muted"> <i class="fas fa-user mr-1"></i> friends</small>
                     </li>
-                    <!-- <li class="list-inline-item">
-                        <h5 class="font-weight-bold mb-0 d-block">340</h5><small class="text-muted"> <i class="fas fa-user mr-1"></i>Following</small>
-                    </li> -->
                 </ul>
             </div>
             <div class="px-4 py-3">
                 <h5 class="mb-0">About</h5>
                 <div class="p-4 rounded shadow-sm bg-light" id="about_details_user">
-                    <!-- <p class="font-italic mb-0">Web Developer</p>
-                    <p class="font-italic mb-0">Lives in New York</p>
-                    <p class="font-italic mb-0">Photographer</p> -->
+
                 </div>
             </div>
             <div class="py-4 px-4">
                 <div class="d-flex align-items-center justify-content-between mb-3">
                     <h5 class="mb-0">Recent photos</h5>
-                    <!-- <a href="#" class="btn btn-link text-muted">Show all</a> -->
                 </div>
                 <div class="row" id="recent_photos_div">
-                    <!-- <div class="col-lg-6 pl-lg-1"><img src="https://images.unsplash.com/photo-1475724017904-b712052c192a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="" class="img-fluid rounded shadow-sm"></div> -->
                 </div>
             </div>
         </div>
