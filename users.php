@@ -128,23 +128,6 @@
             });
             response = await response.json();
             return response;
-            //     if (response.status == 200) {
-            //         successAlert("Friend Request Send!");
-            //     } else if (response.status == 400) {
-            //         errorAlert(response.error && response.errors);
-            //     } else if (response.status == 500) {
-            //         errorAlert(response.error && response.errors);
-            //     } else if (response.status == 422) {
-            //         let keys = Object.keys(response.errors);
-            //         keys.forEach((key) => {
-            //             errorAlert(response.errors[key], "center")
-            //         });
-            //     } else {
-            //         errorAlert('Sorry An error occurred while processing your request. please try again later.');
-            //     }
-            // } catch {
-            //     errorAlert('Sorry An error occurred while processing your request. please try again later.');
-            // }
         }
 
         fetchAllUsers();
