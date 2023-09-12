@@ -106,9 +106,7 @@ if (isset($_POST['signout--user'])) {
             'id' => $_SESSION['user']->id, 'first_name' => $_SESSION['user']->first_name,
             'last_name' => $_SESSION['user']->last_name, 'email' => $_SESSION['user']->email, 'status' => $_SESSION['user']->status
         ];
-        // $userId = $_SESSION['user']->id;
-        // var_dump($_SESSION['user']);
-        // die();
+
         $user->statusChange(0, $_SESSION['user']->id);
         $pusher->pusher->trigger('offline-alert-channel', 'offline-alert-event', $userPerson);
         header('Content-Type: application/json');
