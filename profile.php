@@ -91,25 +91,8 @@
         successAlert
     } from '<?= ASSET ?>/js/Toast.js';
     let loader = document.getElementById("loader_loader");
-    //  import Notification from './public/js/NotificationAlert.js';
-
-    // Pusher.logToConsole = true;
-    // let notific = new Notification();
 
     let userdata = "<?php echo $_SESSION['user']->id ?>";
-
-    // notific.bindRequestAlert(userdata);
-
-    // var pusher = new Pusher('c77d753570287883aa81', {
-    //     cluster: 'ap1'
-    // });
-    // var channel = pusher.subscribe('request-alert-channel');
-    // channel.bind('request-alert-event', function(data) {
-    //     let requestdata = JSON.parse(JSON.stringify(data));
-    //     if(requestdata.user_request_id == userdata) {
-    //         alert('You Have new Friend Request coming from '+requestdata.first_name + ' ' + requestdata.last_name);
-    //     }
-    // });
     let photosGalleryModal = new bootstrap.Modal(document.getElementById("photos_gallery_modal"), {});
     const renderImagesRecent = (datas) => {
         let containerImages = document.getElementById("recent_photos_div");
