@@ -1,39 +1,12 @@
 
-<!-- <div class="overlay_loader hide_loader" id="loader_div">
-    <div class="overlay__inner__loader">
-        <div class="loader"></div> 
-        <div class="overlay__content__loader">-->
-            <span class="loader"></span>
-        <!-- </div>
-    </div>
-</div> -->
+
+<span class="loader"></span>
+
 
 <style>
 .hide_loader{
     display: none;
 }
-/* .overlay_loader{
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    background: rgba(0,0,0,.5);
-}
-
-.overlay__inner__loader {
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-}
-.overlay__content__loader {
-    left: 50%;
-    position: absolute;
-    top: 35%;
-    
-} */
 
 .loader {
   border: 16px solid #f3f3f3;
